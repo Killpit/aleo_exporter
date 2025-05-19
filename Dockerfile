@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -ldflags="-s -w" -o aleo_exporter cmd/aleo_exporter/exporter.go
 
-FROM debian:bullseye-slim
+FROM alpine:latest
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
